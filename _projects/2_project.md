@@ -1,7 +1,7 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image
+title: Trashcan Detection System for the Blind 
+description: A prototype exploring assitive technology for the blind.
 img: assets/img/3.jpg
 importance: 2
 category: work

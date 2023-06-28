@@ -1,7 +1,7 @@
 ---
 layout: page
-title: project 1
-description: a project with a background image
+title: Crowdsource Study and Predictor of Compressed Picture Quality 
+description: Optimizing the tradeoffs between image quality and compression through human eyes.
 img: assets/img/12.jpg
 importance: 1
 category: work

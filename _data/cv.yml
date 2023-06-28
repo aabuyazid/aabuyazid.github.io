@@ -25,42 +25,39 @@
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Associate Software Development Engineer
+      institution: PT. Aliansi Teknologi (DANA) Top Downloaded Indonesian E-Wallet App
+      year: 2022 - 2023
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+        - Engineered backend APIs for bank and ATM transactions, payment methods etc. using Java and SpringBoot.
+        - Spearheaded efforts for payroll feature development in microservices and monitored its status after deployment.
+        - Integrated partners and banks to reconcile thousands of daily transactions by parsing incoming settlement files, matching information with SQL databases, and informing the accounting department of transaction statuses.
+        - Resolved over 70 tickets and bugs posted on JIRA in test and production environments, impacting team performance by ~20%.
+          # - title: Description 3.
+          #   contents:
+          #     - Sub-description 1.
+          #     - Sub-description 2.
+    - title: Research Assistant
+      institution: Arizona State University - Make Programming Simple Research Group
+      year: 2020 - 2021
       description:
-        - Description 1.
-        - Description 2.
+        - Leveraged search (e.g. simulated annealing) and graph transformation algorithms to program novel hardware (e.g. CGRAs) to accelerate ML and general for-loops in edge and low-power computing.
+        - Contributed to lab’s open-source software to program (e.g. incorporating the cross-compiler LLVM), simulate, and benchmark CGRAs (e.g. utilizing the computer architecture simulator gem5).
+        - Peer-reviewed 16 papers in top engineering conferences (e.g. IEEE ESL, TCSI, and FCCM).
 
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
+    - title: Undergraduate Teaching Assistant
+      institution: University of Texas at Austin
+      year: 2018 - 2020
       description:
+        - Showcased my expertise in C/C++, Verilog¸ and hardware/software fundamentals by teaching students.
+        - Demonstrated patience, open-mindedness, and passion to disseminate knowledge to my peers.
 
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
-  type: time_table
-  contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+          # - title: Open Source Projects
+          #   type: time_table
+          #   contents:
+          #     - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
+          #       year: 2015-now
+          #       description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
 
 - title: Honors and Awards
   type: time_table
@@ -69,6 +66,17 @@
       items: 
         - Best Final Project in ECE Image Processing 
         - 3<sup>rd</sup> Best Final Project in ECE Embedded Systems 
+
+- title: Skills
+  type: list
+  contents:
+    - <b>Programming Languages:</b> C/C++, Rust, Java 8, Python, MATLAB
+    - <b>Area of Expertise:</b> Fast Algorithm Design,  Computer Architecture, Digital Signal/Image Processing, Embedded Systems, Systems Engineering
+
+- title: Certificates
+  type: list
+  contents:
+    - <b>NVIDIA Deep Learning Institute</b> - Fundamentals of Accelerated Computing with CUDA Python
 
 #- title: Academic Interests
 #  type: nested_list
@@ -85,4 +93,4 @@
 - title: Other Interests
   type: list
   contents:
-    - <u>Hobbies:</u> Music Composition, Basketball, etc.
+    - <b>Hobbies:</b> Music Composition, Basketball, Tinkering with Linux

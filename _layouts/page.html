@@ -6,8 +6,22 @@ layout: default
     <header class="post-header">
         <h1 class="post-title">{{ page.title }} {% if page.pdf %}<a
                 href="{{ page.pdf| prepend: 'assets/pdf/' | relative_url}}" target="_blank" rel="noopener noreferrer"
-                class="float-right"><i class="fas fa-file-pdf"></i></a>{% endif %}</h1>
-        <p class="post-description">{{ page.description }}</p>
+                class="float-right"><i class="fas fa-file-pdf"></i></a>{% endif %}
+            {% if page.slides%}<a href="{{ page.slides| prepend: 'assets/pdf/' | relative_url}}" target="_blank"
+                rel="noopener noreferrer" class="float-right"><i class="fas fa-person-chalkboard"></i> </a>{% endif %}
+        </h1>
+        <!--
+        <h1 class="pdf-icon">{%if page.pdf %}<a href="{{ page.pdf| prepend: 'assets/pdf/' | relative_url}}"
+                target="_blank" rel="noopener noreferrer" class="float-right"><i class="fas fa-file-pdf"></i></a>{%
+            endif %}
+        </h1>
+        <h1 class="slides-icon">
+            {% if page.slides%}<a href="{{ page.slides| prepend: 'assets/pdf/' | relative_url}}" target="_blank"
+                rel="noopener noreferrer" class="float-right"><i class="fas fa-person-chalkboard"></i> </a>{% endif %}
+        </h1>
+        -->
+        <h1 class="post-description">{{ page.description }}</p>
+
     </header>
 
     <article>

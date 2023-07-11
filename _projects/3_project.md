@@ -3,7 +3,6 @@ layout: page
 title: Automated Audio Visualizer
 description: A barebones embedded system exploring music and image processing
 img: assets/img/7.jpg
-redirect: https://unsplash.com
 importance: 3
 category: work
 ---

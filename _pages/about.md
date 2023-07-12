@@ -2,19 +2,19 @@
 layout: about
 title: About
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: 
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: profile/prof-pic.jpg
   image_circular: false # crops the image to make it circular
   address: # >
     # <p>555 your office number</p>
     # <p>123 your address street</p>
     # <p>Your City, State 12345</p>
 
-news: true  # includes a list of news items
-latest_posts: true  # includes a list of the newest posts
+news: false # includes a list of news items
+latest_posts: false # includes a list of the newest posts
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
@@ -27,10 +27,10 @@ Link to your social media connections, too. This theme is set up to use [Font Aw
 --->
 
 
-Arkan Abuyazid is a computer engineer capable of creating novel solutions and
+I am a computer engineer capable of creating novel solutions and
 systems in low-level, embedded/systems software, CPU chip design, and high-level
-back-end development for mobile applications. His interests in low-latency
-computing and fascination with the algorithm design makes him the ideal engineer
-to work on projects that require fast implementations of algorithms, APIs, and
-more. He understands that mere milliseconds can make or break the success of the
-project, and he strives to find the quickest method for any task at hand.
+back-end development for mobile applications. I believe my interests in low-latency
+computing and fascination with algorithm design makes me the ideal engineer
+to work on projects that require fast implementations of systems, APIs, and
+more. Knowing mere milliseconds can make or break the success of the
+project, I strive to find the most efficient and quickest method for any task. 

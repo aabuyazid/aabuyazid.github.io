@@ -3,10 +3,14 @@
   contents:
     - name: Full Name
       value: Arkan Tsany Abuyazid
-    - name: Date of Birth
-      value: 19th January 1998 
     - name: Languages
       value: English, Bahasa Indonesia, Japanese
+
+- title: Skills
+  type: list
+  contents:
+    - <b>Programming Languages:</b> C/C++, Rust, Java 8, Python, MATLAB
+    - <b>Area of Expertise:</b> Fast Algorithm Design,  Computer Architecture, Digital Signal/Image Processing, Embedded Systems, Systems Engineering
 
 - title: Education
   type: time_table
@@ -67,11 +71,6 @@
         - Best Final Project in ECE Image Processing 
         - 3<sup>rd</sup> Best Final Project in ECE Embedded Systems 
 
-- title: Skills
-  type: list
-  contents:
-    - <b>Programming Languages:</b> C/C++, Rust, Java 8, Python, MATLAB
-    - <b>Area of Expertise:</b> Fast Algorithm Design,  Computer Architecture, Digital Signal/Image Processing, Embedded Systems, Systems Engineering
 
 - title: Certificates
   type: list

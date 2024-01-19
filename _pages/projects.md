@@ -5,7 +5,7 @@ permalink: /projects/
 description: Notable projects worth checking out.
 nav: true
 nav_order: 2
-display_categories: [work, Fun]
+display_categories: [work, fun]
 horizontal: false
 ---
 

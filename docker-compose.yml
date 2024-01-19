@@ -5,8 +5,10 @@ services:
     image: amirpourmand/al-folio
     container_name: al-folio-website
     command: bash -c "
-      rm -f Gemfile.lock
-      && bundler exec jekyll serve --watch --port=8080 --host=0.0.0.0 --livereload --verbose --trace"
+      rm -f Gemfile.lock && 
+      rm -rf _site &&
+      bundle update &&
+      bundler exec jekyll serve --watch --port=8080 --host=0.0.0.0 --livereload --verbose --trace"
     ports:
       - 8080:8080
     volumes:

@@ -2,7 +2,7 @@
 layout: page
 title: Crowdsource Study and Predictor of Compressed Picture Quality 
 description: Optimizing the tradeoffs between image quality and compression through human eyes.
-img: assets/img/12.jpg
+img: assets/img/UT.jpg
 importance: 1
 category: work
 slides: crowdsource/final-presentation.pdf

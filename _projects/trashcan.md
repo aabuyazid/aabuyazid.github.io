@@ -2,7 +2,7 @@
 layout: page
 title: Trashcan Detection System for the Blind 
 description: A prototype exploring assitive technology for the blind.
-img: assets/img/3.jpg
+img: assets/img/UT.jpg
 importance: 2
 category: work
 pdf: trashcan/FinalReport.pdf
@@ -32,7 +32,7 @@ For those interested in the tech stack, this project utilizes the following:
 - Raspberry Pi to control the wearable device.
 - A laptop that receives frames from the D435, processes the images, and sends
   the angle and distance from the camera to the detected trashcan.
-- Machine learning library Gluon to create a transfer learning model
+- Machine learning library PyTorch to create a transfer learning model
 - ADE20K segmentation dataset to obtain the proper dataset by converting
   segmented images of trashcans to a trashcan detection dataset through image 
   processing techniques (e.g. connected components).

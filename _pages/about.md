@@ -26,7 +26,34 @@ Put your address / P.O. box / other info right below your picture. You can also 
 Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
 --->
 
+### Quick Introduction 
+My journey with all things software/hardware related started with a single goal:
+to expand the way we express ourselves digitally, building upon and nurturing
+the space that exists in the intersection of engineering and art. I have explored the fields of
+eletrical engineering and computer science to find my niche, from systems
+engineering, computer architecture, and compilers design for hardware
+accelerators to high-level applications such as deep learning and image processing.
 
+It turns out that my career goals and personal aspirations resonate most with
+the GPU and parallel computing at large. 
+All efforts spent towards the development and utilization of these fields directly
+advance our current modes of expression in digital art as well as hint at
+new avenues to project our fantastical imagination. As
+such, I delved deeper into the applications of GPUs and parllel computing by incorporating embedded computer
+vision to create an assitive tool for the blind, utilizing deep learning to 
+explore the tradeoffs between the compression level of an image and its
+human-perceived quality, and linking graphics APIs like Vulkan for my custom 3D
+game engine.
+
+In my next phase of my career as a master's student at Texas A&M University, 
+I intend to continue exploring more applications of the GPU, such as the underlying
+mathematics of graphics and current state-of-the-art deep learning algorithms. 
+I also intend to broaden my understanding of the GPU's architecture and master
+how to design parallel algorithms that realizes its full potential.
+
+**I am open to opportunities in Computer Vision, Game Engine Development, AI
+Software/Algorithms, and GPU Software**
+<!---
 I am a computer engineer capable of creating novel solutions and
 systems in low-level, embedded/systems software, CPU chip design, and high-level
 back-end development for mobile applications. I believe my interests in low-latency
@@ -34,3 +61,4 @@ computing and fascination with algorithm design makes me the ideal engineer
 to work on projects that require fast implementations of systems, APIs, and
 more. Knowing mere milliseconds can make or break the success of the
 project, I strive to find the most efficient and quickest method for any task. 
+--->

@@ -51,8 +51,7 @@ mathematics of graphics and current state-of-the-art deep learning algorithms.
 I also intend to broaden my understanding of the GPU's architecture and master
 how to design parallel algorithms that realizes its full potential.
 
-**I am open to opportunities in Computer Vision, Game Engine Development, AI
-Software/Algorithms, and GPU Software**
+**I am open to opportunities in Computer Vision, AI Software/Algorithms, GPU Software, and Backend Engineering**
 <!---
 I am a computer engineer capable of creating novel solutions and
 systems in low-level, embedded/systems software, CPU chip design, and high-level

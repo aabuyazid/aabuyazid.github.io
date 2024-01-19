@@ -5,6 +5,7 @@ description: An open-source framework to explore and further compiler research f
 img: assets/img/ASU.jpg
 importance: 3
 category: work
+related_publications: Balasubramanian2021THESIS
 ---
 CCF (CGRA Compilation Framework) is an end-to-end prototype that generates 
 machine code for CGRAs (Coarse-Grained Reconfigurable Arrays) from C/C++

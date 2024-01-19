@@ -6,6 +6,7 @@ img: assets/img/ASU.jpg
 importance: 3
 category: fun
 pdf: inverse-cooking/inverse-cooking-paper.pdf
+related_publications: salvador2019inverse
 ---
 
 As described in the about section, I have strong interests in image processing 

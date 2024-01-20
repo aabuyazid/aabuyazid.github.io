@@ -28,21 +28,21 @@ Link to your social media connections, too. This theme is set up to use [Font Aw
 
 ### Quick Introduction 
 My journey with all things software/hardware related started with a single goal:
-to expand the way we express ourselves digitally, building upon and nurturing
-the space that exists in the intersection of engineering and art. I have explored the fields of
-eletrical engineering and computer science to find my niche, from systems
+to expand the way we express ourselves digitally and building 
+the space within the intersection of engineering and art. I have explored the fields of
+eletrical engineering and computer science to find my place in the world, from systems
 engineering, computer architecture, and compilers design for hardware
 accelerators to high-level applications such as deep learning and image processing.
 
 It turns out that my career goals and personal aspirations resonate most with
 the GPU and parallel computing at large. 
-All efforts spent towards the development and utilization of these fields directly
-advance our current modes of expression in digital art as well as hint at
+All efforts spent towards the development and utilization of these technologies 
+directly advance our current modes of expression in digital art as well as hint at
 new avenues to project our fantastical imagination. As
-such, I delved deeper into the applications of GPUs and parllel computing by incorporating embedded computer
-vision to create an assitive tool for the blind, utilizing deep learning to 
-explore the tradeoffs between the compression level of an image and its
-human-perceived quality, and linking graphics APIs like Vulkan for my custom 3D
+such, I delved deeper into the applications of GPUs and parllel computing. I incorporated 
+embedded computer vision to create an assitive tool for the blind, utilized 
+deep learning to explore the tradeoffs between the compression level of an image and its
+human-perceived quality, and linked graphics APIs like Vulkan to my custom 3D
 game engine.
 
 In my next phase of my career as a master's student at Texas A&M University, 

@@ -36,7 +36,7 @@
         #     - Sub-description 1.
         #     - Sub-description 2.
 
-- title: Experience
+- title: Professional Experience
   type: time_table
   contents:
     - title: Software Development Engineer I
@@ -89,4 +89,4 @@
 - title: Other Interests
   type: list
   contents:
-    - <b>Hobbies:</b> Music Composition, Basketball, Tinkering with Linux
+    - <b>Hobbies:</b> Basketball, Game Development, Music Composition, Tinkering with Linux

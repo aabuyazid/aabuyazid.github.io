@@ -48,9 +48,9 @@ It requires converting the dataflow graph (DFG) of the loop into 3-dimensional g
 that conforms to the spacial constraints of the CGRA's grid structure and
 temporal constraints of the data and control dependencies of the program. This
 is achieved by placing and routing computation nodes similar to FPGA programming 
-as well as scheduling them. This process is the crux of CGRA programming as finding 
+as well as scheduling them. This process is the crux of CGRA programming as **finding 
 a 3-dimensional graph that optimally compacts the loop to ensure fast
-computation speeds while respecting all the restrictions is an NP-Hard problem.
+computation speeds while respecting all the restrictions is an NP-Hard problem**.
 As such, efforts in CGRA programming are focused in developing an algorithm that
 outputs a 3-dimensional graph that is approximately optimal.
 

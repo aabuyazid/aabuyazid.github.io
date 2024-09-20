@@ -20,7 +20,7 @@
       year: 2025
       description:
         - "GPA: 4.0/4.0"
-        - "Coursework: Parallel Computing, Artificial Intelligence, Machine Learning & Database Systems"
+        - "Coursework: Parallel Computing, Operating Systems, Machine Learning, Database Systems & Computational Sciences"
         # - title: Description 3.
         #   contents:
         #     - Sub-description 1.
@@ -30,7 +30,7 @@
       year: 2020
       description:
         - "GPA: 3.60/4.0"
-        - "Coursework: Computer Architecture, Signal/Image Processing, Data Science, Data Structures & Algorithms"
+        - "Coursework: Embedded Systems, Computer Architecture, Signal/Image Processing, Data Science, Data Structures & Algorithms"
         # - title: Description 3.
         #   contents:
         #     - Sub-description 1.
@@ -39,33 +39,56 @@
 - title: Professional Experience
   type: time_table
   contents:
-    - title: Software Development Engineer I
-      institution: DANA Indonesia
+    - title: Software Development Engineer
+      institution: DANA Indonesia - Digital Wallet Platform Valued at $1.2 Billion
       year: 2022 - 2023
       description:
-        - Engineered backend APIs for bank and ATM transactions, payment methods etc. using Java and SpringBoot
-        - Spearheaded efforts to develop a payroll feature, adding a new revenue stream valued over USD 10,000/month
-        - Integrated partners and banks to reconcile thousands of daily transactions by parsing incoming settlement files, matching information with SQL databases, and informing the accounting department of transaction statuses.
-        - Maintained robustness of microservices by embracing test-driven development and building unit and end-to-end tests
-        - Resolved over 70 tickets and bugs posted on JIRA in test and production environments, impacting team performance by ~11%
-        - Boosted team key performance index by ~11% from resolving tickets and bugs posted on JIRA in test and production
+        - Engineered backend APIs for bank and ATM transactions, payment methods etc. using Java and Spring Boot
+        - Spearheaded projects to develop a payroll feature, procuding new revenue streams totaling <b>$1.8M per year</b>
+        - Developed <b>microservices</b> to conduct and verify millions of transactions between partners daily, attracting 100,000+ users
+        - Coordinated with accounting, front-end, and HR departments to deploy featuers that satisfy business requirements
+        - Shortened onboarding period for 2 hires through mentorship, position them towards success in the team
     - title: Compilers Research Assistant
-      institution: Arizona State University - Make Programming Simple Research Group
+      institution: Arizona State University - MPS Lab
       year: 2020 - 2021
       description:
-        - Advanced compiler development efforts to program a class of hardware accelerators called CGRAs
-        - Contributed to lab’s open-source software to program (e.g. incorporating the cross-compiler LLVM), simulate, and benchmark CGRAs (e.g. utilizing the computer architecture simulator gem5)
-        - Overhauled the lab’s legacy software, reduced tech debt, and migrated the toolchain to up-to-date Linux distributions
-        - Revamped the user interface by consolidating various components and streamlining them into easy-to-use executables
-        - Peer-reviewed 16 papers in top engineering conferences (e.g. IEEE ESL, TCSI, and FCCM)
+        - Advanced compiler development efforts to program CGRA hardware accelerators utilizing <b>C++, Python, gem5</b> and <b>LLVM</b>
+        - Contributed to the lab's open source toolchain and standardized performance benchmarking for compiler algorithms
+        - Participated in research community engagement, earning 24 forks and 77 stars on the toolchain on GitHub
+        - Peer-reviewed 16 papers in top engineering conferences (e.g. IEEE ESL, TCSI, and FCCM), enforcing integrity in academia
 
+- title: Leadership/Organizations
+  type: time_table
+  contents:
+    - title: Embedded AI/ML Engineer
+      institution: Switchless - Home Automation Start-up
+      year: 2024
+      description:
+        - Building AI/ML models in <b>PyTorch</b> and <b>ONNX</b> to extend the sensor capabilities and data processing of flagship edge device
+        - Devising system design that adheres to power and memory limitations of edge device while maintaining performance
+    - title: Teaching Assistant
+      institution: University of Texas at Austin / Texas A&M University
+      year: 2018 - 2024
+      description:
+        - Instructed <b>Verilog</b>, <b>C++</b>, and <b>architecture</b> courses of ~75 students, proving expertise in logic design and systems engineering
+        - Mentored students with differing strengths and aspirations, assisting them in pursuing their academic and professional goals
+    - title: Contributor
+      institution: Aggies Coding Club
+      year: 2024
+      description:
+        - Contributing to in-house <b>game engine</b> to further explore game development and assisting others in <b>C++</b> development 
+    - title: Volunteer
+      institution: S.E.E.K (Student Engineers Educating Kids)
+      year: 2020
+      description:
+        - Promoted enthusiasm for various STEM topics within low-income schools by designing and demoing hands-on experiments
 - title: Honors and Awards
   type: time_table
   contents:
     - year: 2020
       items: 
-        - Best Final Project in Image Processing Course
-        - 3<sup>rd</sup> Best Final Project in Embedded Systems Course
+        - Best Final Project in UT Austin Image Processing Course
+        - 3<sup>rd</sup> Best Final Project in UT Austin Embedded Systems Course
 
 
 - title: Certificates
@@ -73,6 +96,7 @@
   contents:
     - <b>NVIDIA Deep Learning Institute</b> - Fundamentals of Accelerated Computing with CUDA Python
     - <b>Forage</b> - Lyft Back-End Engineering Job Simulation
+    - <b>AT&T</b> - 2024 Technology Academy
 
 #- title: Academic Interests
 #  type: nested_list

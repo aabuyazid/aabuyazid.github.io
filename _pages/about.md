@@ -27,13 +27,26 @@ Link to your social media connections, too. This theme is set up to use [Font Aw
 --->
 
 ### Quick Introduction 
+<!---
 My journey with all things software/hardware related started with a single goal:
 to expand the way we express ourselves digitally and building 
 the space within the intersection of engineering and art. I have explored the fields of
 eletrical engineering and computer science to find my place in the world, from systems
 engineering, computer architecture, and compilers design for hardware
 accelerators to high-level applications such as deep learning and image processing.
+--->
+My name is Arkan Abuyazid, and I am a computer science master's student at Texas
+A&M University. 
+My journey as an engineer in tech began with two career missions. One, I aim to support
+scientists and artists achieve the impossible by supplying solutions in the
+forms of software and hardware to address their computing needs. Two, I strive
+to build consumer products that drastically improve the lives of the common
+person. I have explored the fields of electrical engineering and computer
+science to find my place in the world, from computer architecture and compiler
+design for hardware accelerators to high-level applications such as deep
+learning and image processing.
 
+<!---
 It turns out that my career goals and personal aspirations resonate most with
 the GPU and parallel computing at large. 
 All efforts spent towards the development and utilization of these technologies 
@@ -44,14 +57,39 @@ embedded computer vision to create an assitive tool for the blind, utilized
 deep learning to explore the tradeoffs between the compression level of an image and its
 human-perceived quality, and linked graphics APIs like Vulkan to my custom 3D
 game engine.
+--->
 
+With those two missions as my compass, I have found that I must direct my
+efforts towards developing algorithms that utilize GPUs and parallel computing. 
+The problems scientists, artists, and the world at large face are only
+getting more complex; therefore, my solutions must become that much smarter. 
+Leaning towards this paradigm wholeheartedly will sharpen my skill sets and 
+enable me to breath my ambitions to life.
+
+<!---
 In my next phase of my career as a master's student at Texas A&M University, 
-I intend to continue exploring more applications of the GPU, such as the underlying
+I intend to continue exploring more applications of GPUs, such as the underlying
 mathematics of graphics and current state-of-the-art deep learning algorithms. 
 I also intend to broaden my understanding of the GPU's architecture and master
-how to design parallel algorithms that realizes its full potential.
+how to design parallel algorithms that realize its full potential.
+--->
 
-**I am open to opportunities in Computer Vision, AI Software/Algorithms, GPU Software, and Backend Engineering**
+In my next phase of my career as a master's student at Texas A&M University, 
+I intend to continue exploring more applications of GPUs and parallel computing, 
+such as graphics, scientific disciplines outside of computing, and current deep
+learning models. I also intend to broaden my understanding of the GPU's architecture 
+and master how to design parallel algorithms that realize its full potential.
+
+To accomplish these tasks, I am involved in various clubs and organizations,
+being active in academia, and taking computational science courses. 
+I am currently an embedded AI/ML engineer at Switchless, a start-up whose mission 
+is to provide full home automation at an affordable price. My aim is to
+extend the capabilities of their flagship product by applying utilizing my 
+knowledge in image processing, AI/ML, and embedded systems. I am also engaged in
+the Aggies Coding Club, where I am contributing to their own game engine. My goal is
+to familiarize myself more with the game developer and artist space.
+
+**I am open to opportunities in Scientific Computing, AI Software/Algorithms, GPU Software, and Backend Engineering**
 <!---
 I am a computer engineer capable of creating novel solutions and
 systems in low-level, embedded/systems software, CPU chip design, and high-level

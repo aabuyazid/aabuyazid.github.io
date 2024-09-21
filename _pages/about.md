@@ -59,12 +59,6 @@ human-perceived quality, and linked graphics APIs like Vulkan to my custom 3D
 game engine.
 --->
 
-With those two missions as my compass, I have found that I must direct my
-efforts towards developing algorithms that utilize GPUs and parallel computing. 
-The problems scientists, artists, and the world at large face are only
-getting more complex; therefore, my solutions must become that much smarter. 
-Leaning towards this paradigm wholeheartedly will sharpen my skill sets and 
-enable me to breath my ambitions to life.
 
 <!---
 In my next phase of my career as a master's student at Texas A&M University, 
@@ -74,20 +68,24 @@ I also intend to broaden my understanding of the GPU's architecture and master
 how to design parallel algorithms that realize its full potential.
 --->
 
-In my next phase of my career as a master's student at Texas A&M University, 
-I intend to continue exploring more applications of GPUs and parallel computing, 
-such as graphics, scientific disciplines outside of computing, and current deep
+With those two missions as my compass, I have decided to explore different 
+algorithms that utilize GPUs and parallel computing as well as their applications.
+The problems scientists, artists, and the world at large face are only
+getting more complex; therefore, my solutions must become that much smarter. 
+In my next phase of my career as a master's student, 
+I intend to explore graphics, scientific disciplines outside of computing, and current deep
 learning models. I also intend to broaden my understanding of the GPU's architecture 
-and master how to design parallel algorithms that realize its full potential.
+and master how to design parallel algorithms.
 
 To accomplish these tasks, I am involved in various clubs and organizations,
 being active in academia, and taking computational science courses. 
-I am currently an embedded AI/ML engineer at Switchless, a start-up whose mission 
+I am currently building embedded AI/ML models for a start-up whose mission 
 is to provide full home automation at an affordable price. My aim is to
 extend the capabilities of their flagship product by applying utilizing my 
-knowledge in image processing, AI/ML, and embedded systems. I am also engaged in
+knowledge in image processing and embedded systems. I am also engaged in
 the Aggies Coding Club, where I am contributing to their own game engine. My goal is
-to familiarize myself more with the game developer and artist space.
+to familiarize myself more with the game developer space and support my team
+members in their C++ development journey.
 
 **I am open to opportunities in Scientific Computing, AI Software/Algorithms, GPU Software, and Backend Engineering**
 <!---

@@ -20,7 +20,7 @@
       year: 2025
       description:
         - "GPA: 4.0/4.0"
-        - "Coursework: Parallel Computing, Operating Systems, Machine Learning, Database Systems & Computational Sciences"
+        - "Coursework: Parallel Computing, Graphics, Computational Sciences, {Deep, Reinforcement, Machine} Learning, Operating Systems" 
         # - title: Description 3.
         #   contents:
         #     - Sub-description 1.
@@ -30,7 +30,7 @@
       year: 2020
       description:
         - "GPA: 3.60/4.0"
-        - "Coursework: Embedded Systems, Computer Architecture, Signal/Image Processing, Data Science, Data Structures & Algorithms"
+        - "Coursework: Computer Architecture, {Signal, Image} Processing, Data Science, Embedded Systems, Data Structures & Algorithms"
         # - title: Description 3.
         #   contents:
         #     - Sub-description 1.
@@ -43,19 +43,18 @@
       institution: DANA Indonesia - Digital Wallet Platform Valued at $1.2 Billion
       year: 2022 - 2023
       description:
-        - Engineered backend APIs for bank and ATM transactions, payment methods etc. using Java and Spring Boot
+        - Engineered back-end solutions to faciliate bank and ATM transactions, payment methods etc. using <b> Java</b> and <b>Spring Boot</b>.
         - Spearheaded projects to develop a payroll feature, procuding new revenue streams totaling <b>$1.8M per year</b>
         - Developed <b>microservices</b> to conduct and verify millions of transactions between partners daily, attracting 100,000+ users
         - Coordinated with accounting, front-end, and HR departments to deploy featuers that satisfy business requirements
-        - Shortened onboarding period for 2 hires through mentorship, position them towards success in the team
     - title: Compilers Research Assistant
       institution: Arizona State University - MPS Lab
       year: 2020 - 2021
       description:
-        - Advanced compiler development efforts to program CGRA hardware accelerators utilizing <b>C++, Python, gem5</b> and <b>LLVM</b>
+        - Advanced compiler development efforts to program CGRA <b>hardware accelerators</b> utilizing <b>C++, Python, gem5</b> and <b>LLVM</b>
         - Contributed to the lab's open source toolchain and standardized performance benchmarking for compiler algorithms
         - Participated in research community engagement, earning 24 forks and 77 stars on the toolchain on GitHub
-        - Peer-reviewed 16 papers in top engineering conferences (e.g. IEEE ESL, TCSI, and FCCM), enforcing integrity in academia
+        - Peer-reviewed 16 papers in top engineering conferences (e.g. IEEE ESL, TCSI, and FCCM), upholding integrity in academia
 
 - title: Leadership/Organizations
   type: time_table
@@ -64,19 +63,21 @@
       institution: Switchless - Home Automation Start-up
       year: 2024
       description:
-        - Building AI/ML models in <b>PyTorch</b> and <b>ONNX</b> to extend the sensor capabilities and data processing of flagship edge device
-        - Devising system design that adheres to power and memory limitations of edge device while maintaining performance
+        - Building AI/ML models in <b>Tensorflow</b> to extend <b>sensor</b> (e.g. radar, audio) capabilities in flagship edge device.
+        - Pioneering home vulnerability detection technology, enabling edge device to inform users of potential emergencies
+        - Delegating tasks by prioritizing project requirements and elevated team knowledge in AI/ML and {signal, image} processing
+    - title: Member
+      institution: Aggies Coding Club
+      year: 2024 - 2025
+      description:
+        - Directing <b>game engine</b> development to explore <b>computer graphics</b> and support memebers in mastering <b>C++</b>
+        - Created the end-to-end software architecture (e.g. rendering, GUI, etc.), breaking down the project into manageable tasks
+        - Voted "Best Project Member" by ACC officers, highling my impact in actualizing the game engine and rallying the team
     - title: Teaching Assistant
-      institution: University of Texas at Austin / Texas A&M University
-      year: 2018 - 2024
+      institution: Texas A&M University
+      year: 2024 - 2025
       description:
         - Instructed <b>Verilog</b>, <b>C++</b>, and <b>architecture</b> courses of ~75 students, proving expertise in logic design and systems engineering
-        - Mentored students with differing strengths and aspirations, assisting them in pursuing their academic and professional goals
-    - title: Contributor
-      institution: Aggies Coding Club
-      year: 2024
-      description:
-        - Contributing to in-house <b>game engine</b> to further explore game development and assisting others in <b>C++</b> development 
     - title: Volunteer
       institution: S.E.E.K (Student Engineers Educating Kids)
       year: 2020

@@ -292,12 +292,10 @@ export function buildWorld({ textures, quality = 'high' }) {
 
   return {
     scene,
-    root,
     stations: built,
     order,
     update,
     followLights,
-    lights: { key, rim, ambient, hemi },
   };
 }
 
@@ -349,4 +347,6 @@ function createDust(centerX, width) {
   return { points, update };
 }
 
-export { LAYOUT, DESK_MIN, DESK_MAX };
+// LAYOUT is exported for the wiring test, which checks every station has a place
+// on the bench. DESK_MIN and DESK_MAX stay module-local: nothing outside needs them.
+export { LAYOUT };

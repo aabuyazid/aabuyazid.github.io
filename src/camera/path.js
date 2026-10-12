@@ -94,8 +94,6 @@ export function createCameraRig(camera, order) {
   }
 
   return {
-    state,
-    poses,
     setProgress,
     snapTo,
     setLateralOffset,

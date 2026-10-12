@@ -1,17 +1,6 @@
 // Single source of truth for every piece of text, link and asset on the site.
 // Station order here defines the camera path order and the nav order.
 
-export const site = {
-  name: 'Arkan T. Abuyazid',
-  shortName: 'Arkan Abuyazid',
-  role: "Computer Science Master's Student, Texas A&M University",
-  email: 'arkan.2.abuyazid@gmail.com',
-  github: 'aabuyazid',
-  linkedin: 'arkan_abuyazid',
-  description:
-    'Portfolio of Arkan T. Abuyazid — computer science master’s student at Texas A&M working across GPUs, parallel computing, compilers, and computer vision.',
-};
-
 export const stations = [
   {
     id: 'about',

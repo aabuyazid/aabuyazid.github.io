@@ -8,7 +8,6 @@ export function createInteraction({ canvas, camera, stations, onSelect }) {
   const raycaster = new THREE.Raycaster();
   const pointer = new THREE.Vector2();
   let hovered = null;
-  let enabled = true;
   let pointerInside = false;
 
   // Remember each station's resting height so hover can offset from it.
@@ -27,7 +26,7 @@ export function createInteraction({ canvas, camera, stations, onSelect }) {
   }
 
   function pick() {
-    if (!enabled || !pointerInside) return null;
+    if (!pointerInside) return null;
     raycaster.setFromCamera(pointer, camera);
     const hits = raycaster.intersectObjects(pickables, true);
     for (const hit of hits) {
@@ -72,19 +71,5 @@ export function createInteraction({ canvas, camera, stations, onSelect }) {
     return hovered;
   }
 
-  function setEnabled(value) {
-    enabled = value;
-    if (!value) {
-      hovered = null;
-      canvas.style.cursor = '';
-    }
-  }
-
-  function dispose() {
-    canvas.removeEventListener('pointermove', onPointerMove);
-    canvas.removeEventListener('pointerleave', onPointerLeave);
-    canvas.removeEventListener('click', onClick);
-  }
-
-  return { update, setEnabled, dispose, get hovered() { return hovered; } };
+  return { update };
 }

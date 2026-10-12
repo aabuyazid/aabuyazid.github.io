@@ -39,6 +39,16 @@ describe('every station is wired into the scene', () => {
   });
 });
 
+describe('the animated screens have a station to be near', () => {
+  // world.js gates each canvas screen on the index of the station carrying it. If
+  // that lookup found nothing the screen would be dropped and freeze at the frame
+  // it was constructed with, silently, so pin the objects it looks for.
+  it.each([['monitor'], ['laptop']])('exactly one station declares %s', (object) => {
+    const matching = stations.filter((s) => s.object === object);
+    expect(matching, `stations declaring "${object}"`).toHaveLength(1);
+  });
+});
+
 describe('a miswired station fails loudly', () => {
   it('throws naming both the station and the unresolved object', () => {
     expect(() => resolveStationObject({ id: 'ccf', object: 'teapot' })).toThrowError(

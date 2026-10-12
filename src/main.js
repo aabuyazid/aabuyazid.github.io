@@ -105,7 +105,7 @@ async function start() {
     140
   );
 
-  const world = buildWorld({ textures });
+  const world = buildWorld({ textures, quality });
   const rig = createCameraRig(camera, world.order);
   const post = createPost(renderer, world.scene, camera, { quality });
 
@@ -238,7 +238,7 @@ async function start() {
     }
 
     interaction.update(dt);
-    world.update(elapsed, dt);
+    world.update(elapsed, dt, active);
     post.render(dt, elapsed);
 
     requestAnimationFrame(frame);

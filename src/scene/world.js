@@ -67,12 +67,19 @@ export function resolveStationObject(station) {
   return entry;
 }
 
+// How far from the camera's current station a canvas screen still gets redrawn,
+// and how often it redraws while it is in that range. One station either side
+// covers the screen being on its way into frame; one frame in three is far below
+// what the eye reads as a step on motion this slow.
+const SCREEN_VISIBLE_RANGE = 1;
+const SCREEN_FRAME_INTERVAL = 3;
+
 // The desk runs a good way past the end stations so the camera never sees it
 // stop, even with the idle drift and the panel's sideways shift.
 const DESK_MIN = -23.0;
 const DESK_MAX = 40.0;
 
-export function buildWorld({ textures }) {
+export function buildWorld({ textures, quality = 'high' }) {
   const scene = new THREE.Scene();
   scene.background = new THREE.Color(COLORS.wallDeep);
   // Fog starts well beyond the working distance so the near objects stay crisp
@@ -169,7 +176,11 @@ export function buildWorld({ textures }) {
   const key = new THREE.DirectionalLight(0xffc98f, 2.4);
   key.position.set(-7, 11, 8);
   key.castShadow = true;
-  key.shadow.mapSize.set(2048, 2048);
+  // The shadow pass is a full extra render of the scene, so it scales with the
+  // device tier like the pixel ratio and the post-processing chain do. At the
+  // distance the camera works from, a quarter of the resolution is hard to spot.
+  const shadowSize = quality === 'low' ? 1024 : 2048;
+  key.shadow.mapSize.set(shadowSize, shadowSize);
   key.shadow.camera.near = 1;
   key.shadow.camera.far = 40;
   const s = 11;
@@ -227,6 +238,15 @@ export function buildWorld({ textures }) {
     order.push(built[station.id]);
   }
 
+  // The canvas-backed screens are the most expensive thing per frame: each redraw
+  // repaints a full canvas, text and all, then re-uploads it to the GPU. Pair each
+  // with the index of the station carrying it so we can skip the ones the camera is
+  // nowhere near.
+  const screens = [
+    { draw: compression.draw, index: order.findIndex((st) => st.object === 'monitor') },
+    { draw: timeline.draw, index: order.findIndex((st) => st.object === 'laptop') },
+  ].filter((screen) => screen.index >= 0);
+
   // Dust motes drifting in the key light.
   const dust = createDust(deskCenter, deskWidth);
   root.add(dust.points);
@@ -240,9 +260,30 @@ export function buildWorld({ textures }) {
     wash.position.x = x - 1.5;
   }
 
-  function update(t, dt) {
-    compression.draw(t);
-    timeline.draw(t);
+  let frame = 0;
+
+  /**
+   * One frame of scene animation. `activeIndex` is the station the camera is
+   * currently nearest, which decides which screens are worth drawing.
+   */
+  function update(t, dt, activeIndex = 0) {
+    frame++;
+
+    for (const screen of screens) {
+      if (Math.abs(activeIndex - screen.index) > SCREEN_VISIBLE_RANGE) {
+        screen.visible = false;
+        continue;
+      }
+      // Draw on the frame it becomes visible so it never shows a frame left over
+      // from when it stopped, then at a reduced rate while it stays visible. Both
+      // draws are pure functions of elapsed time, so sampling them more coarsely
+      // cannot make the animation drift.
+      if (!screen.visible || frame % SCREEN_FRAME_INTERVAL === 0) {
+        screen.draw(t);
+      }
+      screen.visible = true;
+    }
+
     for (const st of order) {
       STATION_OBJECTS[st.object].animate?.(st.group, t);
     }

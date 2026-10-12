@@ -31,6 +31,10 @@ export function buildFrame(textures) {
   frame.position.z = 0.1;
   group.add(frame);
 
+  // Exposed so a portrait that arrives after startup can still be applied: the
+  // scene no longer waits on this texture before it renders.
+  group.userData.photoMat = photoMat;
+
   // Easel leg behind the frame.
   const leg = box(0.1, 1.9, 0.1, frameMat, 0, 0.95, -0.42);
   leg.rotation.x = 0.26;

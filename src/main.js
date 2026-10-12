@@ -23,6 +23,11 @@ const hintEl = document.getElementById('scroll-hint');
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const isCoarse = window.matchMedia('(pointer: coarse)').matches;
 
+// How long startup will wait on decorative textures before going ahead without
+// them. All the page's text is already in this bundle, so holding the visitor on
+// the loading bar for a picture the scene has a fallback for is never worth it.
+const TEXTURE_DEADLINE_MS = 3000;
+
 /* ------------------------------------------------------------------ */
 /* Fallback: no WebGL means a plain, fully readable document.          */
 /* ------------------------------------------------------------------ */
@@ -73,7 +78,14 @@ async function start() {
     loaderFill.style.width = `${pct}%`;
   };
 
-  const textures = await loadTextures(manager);
+  // Race the decorative textures against a deadline so a slow or stalled image
+  // cannot hold the page on the loading bar. The load itself keeps going: if it
+  // lands later, it is applied to the scene below.
+  const texturesLoading = loadTextures(manager);
+  const textures = await Promise.race([
+    texturesLoading,
+    new Promise((resolve) => setTimeout(() => resolve({ portrait: null }), TEXTURE_DEADLINE_MS)),
+  ]);
 
   loaderFill.style.width = '100%';
   loaderHint.textContent = 'Almost there…';
@@ -108,6 +120,13 @@ async function start() {
   const world = buildWorld({ textures, quality });
   const rig = createCameraRig(camera, world.order);
   const post = createPost(renderer, world.scene, camera, { quality });
+
+  // The deadline above may have won the race. The portrait is still worth showing
+  // when it eventually arrives, so swap it in rather than leaving the frame on its
+  // fallback colour for the rest of the visit.
+  if (!textures.portrait) {
+    texturesLoading.then(({ portrait }) => portrait && applyPortrait(world, portrait));
+  }
 
   // ---------- UI ----------
   // On wide screens the panel covers the left of the viewport, so the camera
@@ -258,6 +277,20 @@ async function start() {
       loaderEl.style.display = 'none';
     }, 800);
   });
+}
+
+/**
+ * Apply a portrait that arrived after the scene was already built. The frame
+ * exposes its photo material for exactly this; the tint has to go back to white
+ * because the material was built with a flat fallback colour instead of a map.
+ */
+function applyPortrait(world, texture) {
+  const owner = Object.values(world.stations).find((st) => st.group.userData.photoMat);
+  const mat = owner?.group.userData.photoMat;
+  if (!mat) return;
+  mat.map = texture;
+  mat.color.set(0xffffff);
+  mat.needsUpdate = true;
 }
 
 /** Load the few textures the scene needs. Missing files degrade gracefully. */

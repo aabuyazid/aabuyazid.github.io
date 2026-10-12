@@ -32,6 +32,41 @@ const LAYOUT = {
   contact: { x: 32.4, lookY: 0.9 },
 };
 
+// Every desk object the scene knows how to build, keyed by the `object` value a
+// station declares in content.js. That field alone decides what a station is drawn
+// as, so adding or re-pointing a station means editing content.js and nothing else.
+// `build` receives the build context; `animate` is optional and runs each frame for
+// the objects that move, which keeps the motion tied to the object rather than to
+// whichever station happens to be using it.
+export const STATION_OBJECTS = {
+  frame: { build: (ctx) => buildFrame(ctx.textures) },
+  chip: { build: () => buildChip(), animate: animateChip },
+  wearable: { build: () => buildWearable(), animate: animateWearable },
+  monitor: { build: (ctx) => buildMonitor(ctx.screens.compression) },
+  plate: { build: () => buildPlate() },
+  laptop: { build: (ctx) => buildLaptop(ctx.screens.timeline) },
+  shelf: { build: (ctx) => buildShelf(ctx.station.repos ?? []) },
+  hobbies: { build: () => buildHobbies(), animate: animateHobbies },
+  mailbox: { build: () => buildMailbox(), animate: animateMailbox },
+};
+
+/**
+ * The scene object a station declares. Throws rather than returning undefined: a
+ * station naming an object we cannot build is a wiring mistake, and silently
+ * leaving a gap on the bench would still show that station in the nav and in the
+ * readable document, which is the failure this replaces.
+ */
+export function resolveStationObject(station) {
+  const entry = STATION_OBJECTS[station.object];
+  if (!entry) {
+    throw new Error(
+      `Station "${station.id}" declares object "${station.object}", which the scene ` +
+        `cannot build. Known objects: ${Object.keys(STATION_OBJECTS).join(', ')}.`
+    );
+  }
+  return entry;
+}
+
 // The desk runs a good way past the end stations so the camera never sees it
 // stop, even with the idle drift and the panel's sideways shift.
 const DESK_MIN = -23.0;
@@ -163,28 +198,20 @@ export function buildWorld({ textures }) {
   const compression = createCompressionScreen();
   const timeline = createTimelineScreen(cvEntries);
 
-  const builders = {
-    about: () => buildFrame(textures),
-    ccf: () => buildChip(),
-    trashcan: () => buildWearable(),
-    crowdsource: () => buildMonitor(compression.texture),
-    'inverse-cooking': () => buildPlate(),
-    cv: () => buildLaptop(timeline.texture),
-    repositories: () =>
-      buildShelf(CONTENT.find((st) => st.id === 'repositories').repos),
-    hobbies: () => buildHobbies(),
-    contact: () => buildMailbox(),
+  // Shared by every builder; the station itself is added per station below.
+  const baseCtx = {
+    textures,
+    screens: { compression: compression.texture, timeline: timeline.texture },
   };
 
   const built = {};
   const order = [];
 
   for (const station of CONTENT) {
-    const make = builders[station.id];
-    if (!make) continue;
+    const entry = resolveStationObject(station);
     const layout = LAYOUT[station.id] ?? { x: 0 };
 
-    const group = make();
+    const group = entry.build({ ...baseCtx, station });
     group.position.x = layout.x;
     if (layout.scale) group.scale.setScalar(layout.scale);
     makePickable(group, station.id);
@@ -192,6 +219,7 @@ export function buildWorld({ textures }) {
 
     built[station.id] = {
       id: station.id,
+      object: station.object,
       group,
       x: layout.x,
       lookY: layout.lookY ?? 1.0,
@@ -215,10 +243,9 @@ export function buildWorld({ textures }) {
   function update(t, dt) {
     compression.draw(t);
     timeline.draw(t);
-    if (built.ccf) animateChip(built.ccf.group, t);
-    if (built.trashcan) animateWearable(built.trashcan.group, t);
-    if (built.hobbies) animateHobbies(built.hobbies.group, t);
-    if (built.contact) animateMailbox(built.contact.group, t);
+    for (const st of order) {
+      STATION_OBJECTS[st.object].animate?.(st.group, t);
+    }
     dust.update(t, dt);
   }
 

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Arkan T. Abuyazid</title>
+    <meta
+      name="description"
+      content="Portfolio of Arkan T. Abuyazid — computer science master's student at Texas A&M working across GPUs, parallel computing, compilers, and computer vision."
+    />
+    <meta name="author" content="Arkan T. Abuyazid" />
+    <meta name="theme-color" content="#241c17" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Arkan T. Abuyazid" />
+    <meta
+      property="og:description"
+      content="Computer science master's student at Texas A&M working across GPUs, parallel computing, compilers, and computer vision."
+    />
+    <meta property="og:url" content="https://aabuyazid.github.io/" />
+    <meta property="og:image" content="https://aabuyazid.github.io/img/profile/prof-pic.webp" />
+    <meta name="twitter:card" content="summary" />
+
+    <link rel="canonical" href="https://aabuyazid.github.io/" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚛️</text></svg>"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+
+    <!-- Loading screen -->
+    <div id="loader" class="loader" role="status" aria-live="polite">
+      <div class="loader__inner">
+        <p class="loader__name">Arkan T. Abuyazid</p>
+        <div class="loader__bar"><span id="loader-fill"></span></div>
+        <p class="loader__hint" id="loader-hint">Setting up the workbench…</p>
+      </div>
+    </div>
+
+    <!-- 3D scene -->
+    <canvas id="scene" aria-hidden="true"></canvas>
+
+    <!-- Scroll driver: gives the page real scroll height for the camera path -->
+    <div id="scroll-track" aria-hidden="true"></div>
+
+    <!-- Station navigation -->
+    <nav id="nav" class="nav" aria-label="Sections"></nav>
+
+    <header class="brand">
+      <p class="brand__name">Arkan T. Abuyazid</p>
+      <p class="brand__role">Scientific Computing · GPU &amp; Parallel · Compilers · Vision</p>
+    </header>
+
+    <button id="panel-toggle" class="panel-toggle" type="button" aria-expanded="false">
+      Read more
+    </button>
+
+    <!-- Readable content. This is the accessible source of truth, populated from src/data/content.js -->
+    <main id="content" class="panel" tabindex="-1" aria-live="polite"></main>
+
+    <p class="hint" id="scroll-hint">Scroll to explore the desk</p>
+
+    <noscript>
+      <div class="fallback-notice">
+        This site uses JavaScript for its 3D scene. The full text content is below.
+      </div>
+    </noscript>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

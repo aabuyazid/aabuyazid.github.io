@@ -64,8 +64,12 @@
       Read more
     </button>
 
-    <!-- Readable content. This is the accessible source of truth, populated from src/data/content.js -->
-    <main id="content" class="panel" tabindex="-1" aria-live="polite"></main>
+    <!-- Readable content. This is the accessible source of truth, populated from src/data/content.js.
+         Deliberately not an aria-live region: the camera replaces this content as it
+         travels, and announcing each replacement re-read the whole article every time.
+         tabindex="-1" lets the panel take focus when it opens, which is what gets a
+         screen reader to the content. -->
+    <main id="content" class="panel" tabindex="-1"></main>
 
     <p class="hint" id="scroll-hint">Scroll to explore the desk</p>
 

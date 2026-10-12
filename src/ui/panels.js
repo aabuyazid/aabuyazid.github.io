@@ -1,8 +1,5 @@
 import { renderStation } from './render.js';
 
-const FOCUSABLE =
-  'a[href], button:not([disabled]), input, select, textarea, [tabindex]:not([tabindex="-1"])';
-
 /**
  * The sliding content panel. It holds one station at a time and is the
  * accessible source of truth for that station's text.
@@ -14,13 +11,22 @@ export function createPanel({ el, toggle, onClose, onOpenChange }) {
 
   const close = () => setOpen(false);
 
+  // The close button and the article wrapper are built once. Rebuilding them on
+  // every station change used to destroy whatever the visitor had focused, which
+  // dropped focus to the document and lost their place.
+  const closeButton = document.createElement('button');
+  closeButton.className = 'panel__close';
+  closeButton.type = 'button';
+  closeButton.setAttribute('aria-label', 'Close panel');
+  closeButton.innerHTML = '&times;';
+  closeButton.addEventListener('click', close);
+
+  const article = document.createElement('article');
+  el.replaceChildren(closeButton, article);
+
   function setContent(station) {
     currentId = station.id;
-    el.innerHTML = `
-      <button class="panel__close" type="button" aria-label="Close panel">&times;</button>
-      <article>${renderStation(station)}</article>
-    `;
-    el.querySelector('.panel__close')?.addEventListener('click', close);
+    article.innerHTML = renderStation(station);
     el.scrollTop = 0;
   }
 
@@ -42,29 +48,15 @@ export function createPanel({ el, toggle, onClose, onOpenChange }) {
     }
   }
 
-  // Esc closes; Tab is trapped inside while open.
+  // Esc closes. Tab is deliberately not trapped: the panel is a sidebar, not a
+  // modal dialog. It has no backdrop, blocks nothing, and leaves the station nav
+  // visible beside it, so confining focus here made that nav unreachable by
+  // keyboard with no way to tell.
   function onKeydown(e) {
     if (!open) return;
     if (e.key === 'Escape') {
       e.preventDefault();
       close();
-      return;
-    }
-    if (e.key !== 'Tab') return;
-
-    const items = [...el.querySelectorAll(FOCUSABLE)].filter(
-      (n) => n.offsetParent !== null
-    );
-    if (!items.length) return;
-    const first = items[0];
-    const last = items[items.length - 1];
-
-    if (e.shiftKey && (document.activeElement === first || document.activeElement === el)) {
-      e.preventDefault();
-      last.focus();
-    } else if (!e.shiftKey && document.activeElement === last) {
-      e.preventDefault();
-      first.focus();
     }
   }
 

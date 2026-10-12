@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "vitest run"
   },
   "author": "Arkan T. Abuyazid",
   "license": "MIT",
@@ -15,6 +16,7 @@
     "three": "^0.169.0"
   },
   "devDependencies": {
-    "vite": "^5.4.8"
+    "vite": "^5.4.8",
+    "vitest": "^3.2.7"
   }
 }
